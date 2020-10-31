@@ -23,12 +23,18 @@ import DownArrow from '@material-ui/icons/ArrowDownwardRounded';
 import Carousel from 'react-bootstrap/Carousel';
 import logo from './assets/Logo.svg';
 import buy from './assets/Buy.svg';
-import image1 from './assets/prod01.png';
-import image2 from './assets/prod02.jpg';
-import image3 from './assets/prod03.png';
-import image4 from './assets/prod04.png';
+import image1 from './assets/prod02.svg';
+import image2 from './assets/prod04.svg';
+import image3 from './assets/prod02.svg';
+import image4 from './assets/prod04.svg';
+import imageSlider1 from './assets/prod04.jpg';
+import imageSlider2 from './assets/prod05.jpg';
 import styled from 'styled-components';
-
+import logoFacebook from './assets/facebook.svg';
+import logoInstagram from './assets/instagram.svg';
+import logoPinterest from './assets/pinterest.svg';
+import logoVtex from './assets/vtex-pci-200.svg';
+import logoEbit from './assets/selo-ebit.svg';
 import 'swiper/swiper.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -118,6 +124,24 @@ function App() {
       fontSize: 18,
     },
   }))(Button);
+  const SendButton = withStyles((theme) => ({
+    root: {
+      width: 234,
+      height: 40,
+      color: theme.palette.getContrastText('#32917B'),
+      backgroundColor: ' #DE8F75;',
+      '&:focus': {
+        outline: 'none',
+        backgroundColor: ' #DE8F75;',
+      },
+      '&hover': {
+        backgroundColor: ' #DE8F75;',
+      },
+      fontFamily: 'Montserrat',
+      fontWeight: 400,
+      fontSize: 18,
+    },
+  }))(Button);
 
   const nextImage = () => {
     console.log(activeImageIndex);
@@ -147,7 +171,7 @@ function App() {
       return (
         <Image
           src={image}
-          style={{ height: 80, width: 80, marginTop: 9 }}
+          style={{ height: 80, width: 50, marginTop: 9 }}
           className={activeImageIndex === index ? 'active' : 'inactive'}
           onClick={() => setActiveImageIndex(index)}
           // onClick={console.log('clicked')}
@@ -308,7 +332,7 @@ function App() {
           </div>
         </Col>
         <Col
-          lg={4}
+          lg={5}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -401,7 +425,7 @@ function App() {
               justifyContent: 'center',
             }}
           >
-            <span id="title-suggestions">QUEM VIU VIU TAMBÉM</span>
+            <span id="title-suggestions">QUEM VIU, VIU TAMBÉM</span>
           </div>
         </Col>
       </Row>
@@ -438,28 +462,28 @@ function App() {
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider1}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider2}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider1}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider2}
                     />
                   </Col>
                 </Row>
@@ -548,28 +572,28 @@ function App() {
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider1}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider2}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider1}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider2}
                     />
                   </Col>
                 </Row>
@@ -658,28 +682,28 @@ function App() {
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider1}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider2}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider1}
                     />
                   </Col>
-                  <Col>
+                  <Col lg={3}>
                     <Image
                       // style={{ width: '100%', height: '100%' }}
                       className="image-slider"
-                      src={images[activeImageIndex]}
+                      src={imageSlider2}
                     />
                   </Col>
                 </Row>
@@ -794,6 +818,76 @@ function App() {
           </div>
         </Col>
       </Row>
+      <Row className="d-flex footer-container" style={{
+        backgroundColor: 'transparent',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 41.8,
+      }}>
+        <div class="container d-flex">
+          <div class="circle">
+            <div style={{backgroundColor: 'transparent', width: '70%', display: 'flex', justifyContent: 'center', marginTop: 39, marginLeft: 46}}>
+              <span id="news-text">ASSINE NOSSAS NEWS</span>
+
+            </div>
+            <div style={{backgroundColor: 'transparent', width: '70%', display: 'flex', justifyContent: 'center', marginTop: 39, marginLeft: 50}}>
+              <Input
+                style={{width: '70%'}}
+                placeholder="Nome"
+                id="input-with-icon-adornment"
+              />
+            </div>
+            <div style={{backgroundColor: 'transparent', width: '70%', display: 'flex', justifyContent: 'center', marginTop: 39, marginLeft: 50}}>
+              <Input
+                style={{width: '70%'}}
+                placeholder="E-mail"
+                id="input-with-icon-adornment"
+              />
+            </div>
+            <div style={{backgroundColor: 'transparent', width: '40%', display: 'flex', justifyContent: 'center', marginTop: 39, marginLeft: 90}}>
+              <SendButton>ENVIAR</SendButton>
+            </div>
+          </div>
+          <div className="d-flex" style={{display: 'flex', flexDirection: 'column', backgroundColor: 'transparent', width: '100%', height: 250}}>
+            <div style={{marginTop: 30, display: 'flex', flexDirection: 'row', backgroundColor: 'transparent', width: '15%', height: 50, alignItems: 'start', justifyContent: 'space-around'}} id="social-logos">
+              <img id="logo-facebook" src={logoFacebook}/>
+              <img id="logo-instagram" src={logoInstagram}/>
+              <img id="logo-pinterest" src={logoPinterest}/>
+            </div>
+            <div style={{marginTop: 30, display: 'flex', flexDirection: 'row', backgroundColor: 'transparent', width: '100%', height: 100, alignItems: 'start'}} id="social-logos">
+              <div>
+                <img id="logo-facebook" src={logoVtex}/>
+                <img className="border" id="logo-instagram" src={logoEbit} style={{marginLeft: 20, borderRadius: 10}}/>
+              </div>
+              <div style={{marginLeft: 55, display: 'flex', flexDirection: 'column'}}>
+                <span className="title-footer">INSTITUCIONAL</span>
+                <span className="item-footer">A Marca</span>
+                <span className="item-footer">Lojas</span>
+                <span className="item-footer">Contato</span>
+              </div>
+              <div style={{marginLeft: 55, display: 'flex', flexDirection: 'column'}}>
+                <span className="title-footer">INSTITUCIONAL</span>
+                <span className="item-footer">A Marca</span>
+                <span className="item-footer">Lojas</span>
+                <span className="item-footer">Contato</span>
+              </div>
+              <div style={{marginLeft: 55, display: 'flex', flexDirection: 'column'}}>
+                <span className="title-footer">INSTITUCIONAL</span>
+                <span className="item-footer">A Marca</span>
+                <span className="item-footer">Lojas</span>
+                <span className="item-footer">Contato</span>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <div style={{color: 'white',paddingLeft: 20, display: 'flex', alignItems: 'center', justifyContent: 'center' , backgroundColor: '#DE8F75', width: '100%', marginTop: 250, height: 100}}>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie massa in nunc condimentum, vel placerat lacus pulvinar. Suspendisse vel nisl eu tortor feugiat tempus vel in tortor. Nunc semper leo nec tellus gravida faucibus. 
+          </span>
+        </div>
+      </Row>
+
     </Container>
   );
 }
