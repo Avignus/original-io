@@ -1,0 +1,26 @@
+    {
+      "id": "1",
+      "name": "RASTEIRA TIRA DEDO",
+      "code": "RT 0568",
+      "dateCode": "03.07.0653",
+      "price": "69,00",
+      "priceDiscount": "20%",
+      "colorsNames": [
+		'Fucsia',
+		'Casal',
+		'Carmim Médio'
+		'Preto'
+	],
+      "colorsHex": [
+		'#a9095e',
+		'#2a5a75',
+		'#a14830',
+		'#000000'
+	],
+      "sizes": [
+		'33', '34', '35', '36', '37',
+		'38', '39', '40', '41', '42'
+	]
+    },	
+169, 9, 94
+42, 90, 117
